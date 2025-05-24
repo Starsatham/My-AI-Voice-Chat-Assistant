@@ -1,1 +1,182 @@
+body{
+  background: #1a293e;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.mystar-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 29px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #FFD700;
+}
+.container{
+display: flex;
+ flex-direction: column;
+}
 
+.text{
+  margin-top: 82vh;
+}
+
+p{
+  z-index: 999;
+  user-select: none;
+  margin-left:66px;
+  font-size:36px;
+  margin-top:-26px;
+  color:#fff;
+  padding:0px;
+  position:relative;
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+#loader-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+@media (max-width: 768px) {
+  #loader-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  #cube-loader {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cube {
+    width: 100px;
+    height: 100px;
+  }
+
+  .face-text {
+    font-size: 14px;
+  }
+}
+#cube-loader {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  transform-style: preserve-3d;
+  animation: rotate-cube 10s infinite linear;
+}
+.cube {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 66, 66, 0.2);
+  border: 2px solid #ff4d4d;
+  box-shadow: 0 0 20px #e72121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.face-text {
+  font-size: 20px;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  text-align: center;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #FF1C1C,
+    0 0 20px #FF1C1C,
+    0 0 25px #FF1C1C;
+  animation: neon2 2s ease-in-out infinite alternate;
+  padding: 10px;
+}
+/* face positions-mine */
+#front  { transform: rotateY(0deg) translateZ(75px); }
+#back   { transform: rotateY(180deg) translateZ(75px); }
+#right  { transform: rotateY(90deg) translateZ(75px); }
+#left   { transform: rotateY(-90deg) translateZ(75px); }
+#top    { transform: rotateX(90deg) translateZ(75px); }
+#bottom { transform: rotateX(-90deg) translateZ(75px); }
+
+@keyframes rotate-cube {
+  0%   { transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+@keyframes neon2 {
+  from {
+    text-shadow:
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px #FF1C1C,
+      0 0 70px #FF1C1C,
+      0 0 80px #FF1C1C,
+      0 0 100px #FF1C1C,
+      0 0 150px #FF1C1C;
+  }
+  to {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px #fff,
+      0 0 20px #FF1C1C,
+      0 0 35px #FF1C1C,
+      0 0 40px #FF1C1C,
+      0 0 50px #FF1C1C,
+      0 0 75px #FF1C1C;
+  }
+}
+/**********************Input Box***************************/
+#textInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #181818a8;
+  border-color: blue;
+  box-shadow: 0 0 20px #5500ff, inset 0 0 0px rgb(25, 0, 255);
+  border-radius: 8px;
+  padding: 5px 10px;
+  margin: 0 10%;
+}
+@media (max-width: 768px) {
+  #textInput {
+    margin: 0 5%;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.input-field {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  outline: none;
+  color: white;
+  font-family: cursive;
+  padding: 5px;
+  font-size: 16px;
+}
+.glow-on-hover {
+  width: 35px;
+  height: 35px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 5px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 5px #00f, 0 0 10px #00f;
+}
+.glow-on-hover:hover {
+  box-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f;
+}
+
+/**********************Input Box End***************************/

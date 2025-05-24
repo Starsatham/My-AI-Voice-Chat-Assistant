@@ -1,2 +1,2 @@
 # My-Voice-Chat-Assistant
-Star AI Assistant is a Python-based desktop tool that performs tasks like answering questions, opening apps, browsing sites, and playing YouTube. It uses open APIs to simulate smart conversations and supports multiple activation methods for ease of use.
+Star AI Assistant is a Python-based desktop assistant designed to handle everyday tasks like answering questions, opening apps, browsing websites, and playing YouTube videos. It simulates natural conversations using open APIs, including ChatGPT alternatives. Star is built to be extensible and user-friendly, supporting multiple ways to activate commands. It’s a smart and adaptable tool for both productivity and interaction.
